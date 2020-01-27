@@ -1,0 +1,33 @@
+parser: '@typescript-eslint/parser'
+
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - prettier
+  - prettier/react
+
+env:
+  browser: true
+  es6: true
+  node: true
+
+plugins:
+  - import
+  - react-hooks
+
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+
+rules:
+  no-unused-vars: 0
+  no-useless-constructor: 2
+  no-undef: 2
+  no-console: [2, { allow: ['error', 'warn', 'info'] }]
+  no-var: 2
+  prefer-const: 2
+  no-const-assign: 2
+  import/first: 2
+  no-use-before-define: [2, { 'functions': false, 'classes': false }]
+  space-before-function-paren: 0
+  no-fallthrough: 0
